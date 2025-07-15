@@ -12,6 +12,8 @@ jobs:
           node-version: '18.x'
       - run: npm install
       - run: npm run build
+      - name: Install dependencies
+        run: npm ci
   test: 
     needs: build
     runs-on: ubuntu-latest
